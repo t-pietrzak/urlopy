@@ -123,6 +123,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "urlopy"
+    }
+  },
+  "defaultProject": "urlopy",
+  "cli": {
+    "analytics": "7784be6f-b0b3-40bd-a7a0-2fc7d1c27949"
+  }
 }

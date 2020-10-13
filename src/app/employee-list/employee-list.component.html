@@ -1,0 +1,33 @@
+<div class="list row">
+    <div class="col-md-6">
+      <h4>Lista pracowników</h4>
+      <ul class="list-group">
+        <li
+          class="list-group-item"
+          *ngFor="let employee of employees; let i = index"
+          [class.active]="i == currentIndex"
+          (click)="setActiveEmployee(employee, i)"
+        >
+          {{ employee.name }}
+        </li>
+      </ul>
+  
+      <button class="m-3 btn btn-sm btn-danger" (click)="removeAllEmployees()">
+        Usuń dane
+      </button>
+    </div>
+  
+    <div class="col-md-6">
+      <div *ngIf="currnetEmployee">
+        <app-tutorial-details
+          (refreshList)="refreshList()"
+          [tutorial]="currnetEmployee"
+        ></app-tutorial-details>
+      </div>
+  
+      <div *ngIf="!currnetEmployee">
+        <br />
+        <p>Please click on a Tutorial...</p>
+      </div>
+    </div>
+  </div>

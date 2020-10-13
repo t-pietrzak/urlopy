@@ -1,0 +1,19 @@
+.account {
+    &__row {
+        margin-bottom: 20px;
+        padding-bottom: 5px;
+        border: none;
+        border-bottom: 1px solid #ffc0cbb9;
+        display: flex;
+        justify-content: space-between;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+    }
+
+    &__input {
+        background-color: transparent;
+        border: 2px solid #ffc0cb;
+        padding: 5px 10px;
+        border-radius: 5px;
+        text-align: center;
+    }
+}

@@ -1,0 +1,21 @@
+<div>
+    <div *ngIf="!submitted">
+        <div>
+            <label for="name">Imię i nazwisko</label>
+            <input type="text" id="name" required name="name" [(ngModel)]="employee.name">
+        </div>
+        <div>
+            <label for="currnet">Rozpoczęcie obecnej pracy</label>
+            <input type="date" id="currnet" required name="currnet" [(ngModel)]="employee.current_job">
+        </div>
+        <div>
+            <label for="first">Rozpoczęcie pierwszej pracy</label>
+            <input type="date" id="first" required name="first" [(ngModel)]="employee.first_job">
+        </div>
+        <button (click)="saveEmployee()">Dodaj</button>
+    </div>
+    <div *ngIf="submitted">
+        <h4>Udało się dodać pracownika</h4>
+        <button (click)="newEmployee()">Dodaj następnego pracownika</button>
+    </div>
+</div>
