@@ -1,0 +1,67 @@
+.employees {
+    border: 3px solid #ffc0cb;
+    border-radius: 6px;
+    padding: 10px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+    &__title {
+        font-size: 25px;
+        margin-bottom: 10px;
+        padding-bottom: 5px;
+        border-bottom: 3px solid #ffc0cb;
+    }
+
+    &__button {
+        margin: 5px auto 0;
+        display: block;
+        border: 1px solid #ffc0cb;
+        background-color: #ffc0cbb9;
+        padding: 10px 15px;
+        border-radius: 5px;
+
+        &--delete {
+            border: 1px solid #b32929;
+            background-color: #ff7575;
+            color: #fff;
+        }
+    }
+
+    &__details {
+        font-size: 12px;
+        border: 3px solid #ffc0cb;
+        border-radius: 6px;
+        margin-top: 20px;
+        padding: 10px 15px;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+    }
+
+    &__instruction {
+        line-height: 1;
+    }
+
+    &__list {
+        list-style: none;
+        border-bottom: 1px solid #ffc0cb;
+    }
+
+    &__item {
+        font-size: 12px;
+        padding-left: 0;
+        cursor: pointer;
+
+        &:hover {
+            border: 1px dashed #ffc0cb;
+        }
+
+        &.active {
+            font-size: 14px;
+            font-weight: 700;
+            padding-left: 5px;
+            transition: padding-left 0.3s 0s ease-in-out;
+            background-color: #ffc0cbb9;
+        }
+    }
+}
