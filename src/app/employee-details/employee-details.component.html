@@ -1,0 +1,43 @@
+<div *ngIf="currentEmployee" class="details">
+    <h4>Pracownik</h4>
+    <form>
+        <div class="details__group">
+            <label for="name">Imię i nazwisko</label>
+            <input type="text" class="details__input" id="name" [(ngModel)]="currentEmployee.name" name="name"/>
+        </div>
+        <div class="details__group">
+            <label for="first_job">Rozpoczęcie pierwszej pracy</label>
+            <input type="text" class="details__input" id="first_job" [(ngModel)]="currentEmployee.first_job" name="first_job"/>
+        </div>
+        <div class="details__group">
+            <label for="current_job">Rozpoczęcie obecnej pracy</label>
+            <input type="text" class="details__input" id="current_job" [(ngModel)]="currentEmployee.current_job" name="current_job"/>
+        </div>
+
+        <div class="details__group">
+        <label><strong>Status:</strong></label>
+        <span>{{ currentEmployee.published ? "Urlop" : "W pracy" }}</span>
+        </div>
+    </form>
+
+    <button class="badge badge-primary mr-2" *ngIf="currentEmployee.published" (click)="updatePublished(false)">
+        W pracy
+    </button>
+    <button *ngIf="!currentEmployee.published" class="badge badge-primary mr-2" (click)="updatePublished(true)">
+        Urlop
+    </button>
+
+    <button class="badge badge-danger mr-2" (click)="deleteEmployee()">
+        Usuń
+    </button>
+
+    <button type="submit" class="badge badge-success" (click)="updateEmployee()">
+        Aktualizuj dane
+    </button>
+    <p>{{ message }}</p>
+    </div>
+
+    <div *ngIf="!currentEmployee">
+    <br />
+    <p>Cannot access this Employee...</p>
+</div>

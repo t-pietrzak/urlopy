@@ -14,7 +14,7 @@
 
   <div class="employees__details">
     <div *ngIf="currnetEmployee">
-      <app-tutorial-details (refreshList)="refreshList()" [tutorial]="currnetEmployee"></app-tutorial-details>
+      <app-employee-details (refreshList)="refreshList()" [employee]="currnetEmployee"></app-employee-details>
     </div>
 
     <div class="employees__instruction" *ngIf="!currnetEmployee">

@@ -19,7 +19,6 @@ export class NewEmployeeComponent implements OnInit {
 
   saveEmployee(): void {
     this.employeeService.create(this.employee).then((response:any)=>{
-      console.log(response);
       this.submitted = true;
     }).catch((error:any)=>{
       console.log(error);
